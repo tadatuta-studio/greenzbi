@@ -1,0 +1,3 @@
+({
+    shouldDeps: ['share', 'copyright', 'link']
+})

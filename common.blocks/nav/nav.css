@@ -1,0 +1,11 @@
+.nav
+{
+    float: left;
+}
+
+.nav .link
+{
+    display: inline-block;
+    line-height: 50px;
+    color: #999;
+}
