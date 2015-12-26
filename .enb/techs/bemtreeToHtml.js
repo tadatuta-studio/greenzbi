@@ -16,10 +16,9 @@
  * nodeConfig.addTech(require('enb/techs/html-from-bemjson'));
  * ```
  */
-var vm = require('vm'),
-    vow = require('vow'),
-    vfs = require('enb/lib/fs/async-fs'),
-    asyncRequire = require('enb/lib/fs/async-require'),
+var vow = require('vow'),
+    vfs = require('enb').asyncFs,
+    asyncRequire = require('enb-async-require'),
     dropRequireCache = require('enb/lib/fs/drop-require-cache');
 
 module.exports = require('enb/lib/build-flow').create()
@@ -31,31 +30,17 @@ module.exports = require('enb/lib/build-flow').create()
         dropRequireCache(require, bemhtmlFilename);
 
         return vow.all([
-                vfs.read(bemtreeFilename, 'utf-8'),
+                asyncRequire(bemtreeFilename),
                 asyncRequire(bemhtmlFilename)
             ])
             .spread(function(bemtree, bemhtml) {
-                var ctx = vm.createContext({
-                    Vow : vow,
-                    console : console,
-                    setTimeout : setTimeout
-                });
-
-                vm.runInContext(bemtree, ctx);
-
-                return [ctx.BEMTREE, bemhtml.BEMHTML];
-            })
-            .spread(function(BEMTREE, BEMHTML) {
-                return BEMTREE.apply({
+                return bemhtml.BEMHTML.apply(bemtree.BEMTREE.apply({
                     block: 'root',
                     data: {
                         url: '/',
                         pages: require('../../content')
                     }
-                }).then(function(bemjson) {
-                    // console.log('bemjson', JSON.stringify(bemjson, null ,4));
-                    return BEMHTML.apply(bemjson);
-                });
+                }));
             });
     })
     .createTech();

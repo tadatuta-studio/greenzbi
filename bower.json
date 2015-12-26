@@ -1,18 +1,14 @@
 {
-  "name": "bem-project-stub",
-  "version": "1.0.0",
-  "description": "BEM project stub",
-  "bugs": "https://github.com/bem/project-stub/issues",
+  "name": "greenzbi",
+  "version": "1.4.0",
+  "description": "Crimean rock band site",
+  "bugs": "https://github.com/tadatuta-studio/greenzbi/issues",
   "ignore": [
     ".bem/cache",
     "node_modules",
     "libs"
   ],
   "dependencies": {
-    "bem-core": "bem/bem-core#bem-xjst-2x@v2",
-    "bem-components": "bem/bem-components#feature/prepare-for-bem-xjst-v2"
-  },
-  "resolutions": {
-    "bem-core": "bem-xjst-2x@v2"
+    "bem-components": "2.4.0"
   }
 }

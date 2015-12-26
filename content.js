@@ -29,4 +29,4 @@ module.exports = [
         title: 'Контакты',
         url: '/contacts'
     }
-]
+];

@@ -23,9 +23,9 @@ block('root').def()(function() {
             { elem : 'meta', attrs : { name : 'description', content : '' } },
             { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
             { elem : 'css', url : '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' },
-            { elem : 'css', url : '_index.css' }
+            { elem : 'css', url : 'index.min.css' }
         ],
-        scripts: [{ elem : 'js', url : '_index.js' }],
+        scripts: [{ elem : 'js', url : 'index.min.js' }],
         mods : { theme : 'islands' }
     });
 });

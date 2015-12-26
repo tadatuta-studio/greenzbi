@@ -2,7 +2,7 @@ block('footer').content()(function() {
     return [
         {
             elem: 'left',
-            content: '© 2015 Greenzbi'
+            content: '© ' + new Date().getFullYear() + ' Greenzbi'
         },
         {
             elem: 'center',
