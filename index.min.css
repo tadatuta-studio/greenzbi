@@ -1,0 +1,327 @@
+/* ../../common.blocks/panel/panel.css:begin */
+.panel
+{
+    background: rgba(0, 0, 0, .6);
+}
+/* ../../common.blocks/panel/panel.css:end */
+/* ../../common.blocks/nav/nav.css:begin */
+.nav
+{
+    float: left;
+    margin-left: -15px;
+    font-size: 16px;
+}
+
+.nav__item
+{
+    display: inline-block;
+    padding: 15px;
+    line-height: 20px;
+    color: #999;
+    text-decoration: none;
+}
+
+.nav__item:hover {
+    color: #fff;
+}
+
+.nav__item_active {
+    background: #333;
+    color: #fff;
+}
+/* ../../common.blocks/nav/nav.css:end */
+/* ../../common.blocks/social/social.css:begin */
+.social
+{
+    float: right;
+    margin-top: 6px;
+}
+
+.social__link
+{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    color: #666;
+    text-decoration: none;
+}
+
+.social__link
+{
+    display: block;
+    font-family: FontAwesome;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+}
+/* ../../common.blocks/social/social.css:end */
+/* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:begin */
+.clearfix:after
+{
+    display: table;
+    clear: both;
+
+    content: '';
+}
+/* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:end */
+/* ../../common.blocks/content/content.css:begin */
+.content {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content__title {
+    font-weight: normal;
+}
+/* ../../common.blocks/content/content.css:end */
+/* ../../common.blocks/gallery/gallery.css:begin */
+.gallery .image {
+    margin-right: 6px;
+}
+
+.modal .image {
+    display: block;
+}
+/* ../../common.blocks/gallery/gallery.css:end */
+/* ../../libs/bem-components/common.blocks/image/image.styl:begin */
+.image {
+  border: 0;
+}
+/* ../../libs/bem-components/common.blocks/image/image.styl:end */
+/* ../../libs/bem-components/common.blocks/popup/popup.styl:begin */
+.popup {
+  position: absolute;
+}
+/* ../../libs/bem-components/common.blocks/popup/popup.styl:end */
+/* ../../common.blocks/footer/footer.css:begin */
+.footer
+{
+    line-height: 77px;
+    background: #222;
+    color: #7b7b7b;
+}
+
+.footer__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer__center {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center
+}
+
+.footer .link {
+    color: #aaa;
+}
+/* ../../common.blocks/footer/footer.css:end */
+/* ../../common.blocks/share/share.css:begin */
+.share {
+    width: 170px;
+    margin: auto;
+}
+/* ../../common.blocks/share/share.css:end */
+/* ../../common.blocks/page/page.css:begin */
+html {
+    height: 100%;
+}
+
+.page {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100%;
+}
+
+.page__section {
+    padding: 0 53px;
+}
+/* ../../common.blocks/page/page.css:end */
+/* ../../libs/bem-components/common.blocks/modal/modal.styl:begin */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.modal__table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.modal__cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal__content {
+  display: inline-block;
+  text-align: left;
+}
+/* ../../libs/bem-components/common.blocks/modal/modal.styl:end */
+/* ../../libs/bem-components/design/common.blocks/page/_theme/page_theme_islands.styl:begin */
+html {
+  min-height: 100%;
+}
+.page_theme_islands {
+  font: 13px/15px Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  color: #000;
+  background: #fff;
+}
+/* ../../libs/bem-components/design/common.blocks/page/_theme/page_theme_islands.styl:end */
+/* ../../libs/bem-components/design/common.blocks/modal/_theme/modal_theme_islands.styl:begin */
+.modal_theme_islands {
+  display: none;
+  visibility: hidden;
+  margin: -9999px 0 0 -9999px;
+  background: rgba(50,50,50,0.2);
+}
+.modal_theme_islands,
+.modal_theme_islands .modal__content {
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.modal_theme_islands .modal__content {
+  margin: 5px;
+  border: 1px solid #bfbfbf;
+  background-color: #fff;
+}
+.modal_theme_islands.modal_js_inited {
+  display: block;
+}
+.modal_theme_islands.modal_has-animation {
+  -webkit-animation-name: modal_theme_islands;
+          animation-name: modal_theme_islands;
+}
+.modal_theme_islands.modal_has-animation .modal__content {
+  -webkit-animation-name: modal_theme_islands__content;
+          animation-name: modal_theme_islands__content;
+}
+.modal_theme_islands.modal_visible {
+  visibility: visible;
+  margin: 0;
+}
+.modal_theme_islands.modal_visible.modal_has-animation {
+  -webkit-animation-name: modal_theme_islands_visible;
+          animation-name: modal_theme_islands_visible;
+}
+.modal_theme_islands.modal_visible.modal_has-animation .modal__content {
+  -webkit-animation-name: modal_theme_islands_visible__content;
+          animation-name: modal_theme_islands_visible__content;
+}
+@-webkit-keyframes modal_theme_islands {
+  0% {
+    visibility: visible;
+    margin: 0;
+    opacity: 1;
+  }
+  99% {
+    margin: 0;
+  }
+  100% {
+    visibility: hidden;
+    margin: -9999px 0 0 -9999px;
+    opacity: 0;
+  }
+}
+@keyframes modal_theme_islands {
+  0% {
+    visibility: visible;
+    margin: 0;
+    opacity: 1;
+  }
+  99% {
+    margin: 0;
+  }
+  100% {
+    visibility: hidden;
+    margin: -9999px 0 0 -9999px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes modal_theme_islands_visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes modal_theme_islands_visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modal_theme_islands__content {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes modal_theme_islands__content {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@-webkit-keyframes modal_theme_islands_visible__content {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes modal_theme_islands_visible__content {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/* ../../libs/bem-components/design/common.blocks/modal/_theme/modal_theme_islands.styl:end */
