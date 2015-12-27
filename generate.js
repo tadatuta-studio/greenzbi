@@ -16,6 +16,8 @@ var fs = require('fs'),
 
 mkdirp.sync(outputFolder);
 
+fs.writeFileSync(path.join(outputFolder, 'CNAME'), 'greenzbi.ru');
+
 ['min.js', 'min.css'].forEach(function(ext) {
     fs.createReadStream(path.join(pathToBundle, bundleName + '.' + ext))
         .pipe(fs.createWriteStream(path.join(outputFolder, bundleName + '.' + ext)));
