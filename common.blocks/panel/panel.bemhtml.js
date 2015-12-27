@@ -1,1 +1,4 @@
-block('panel').mix()({ block: 'clearfix' });
+block('panel').mix()([
+    { block: 'clearfix' },
+    { block: 'page', elem: 'section' }
+]);

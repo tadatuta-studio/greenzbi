@@ -16,18 +16,20 @@
     "bem": "^0.10.2",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.0",
-    "enb-async-require": "^1.0.1",
     "enb-bem-techs": "^2.1.0",
     "enb-bemxjst": "tadatuta/enb-bemxjst#4.x-bemtree",
     "enb-borschik": "^2.1.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0",
-    "vow": "^0.4.11"
+    "glob": "^6.0.2",
+    "marked": "^0.3.5",
+    "mkdirp": "^0.5.1"
   },
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i",
+    "make": "enb make && node generate"
   },
   "private": true
 }

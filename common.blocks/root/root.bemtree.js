@@ -1,5 +1,6 @@
-block('root').def()(function() {
+block('root').replace()(function() {
     var data = this.ctx.data,
+        relPathToRoot = data.relPathToRoot,
         url = data.url,
         i = 0,
         pages = data.pages,
@@ -15,17 +16,17 @@ block('root').def()(function() {
 
     this.data = data;
 
-    return applyCtx({
-        block : 'page',
-        title : this.page.title,
-        favicon : '/favicon.ico',
-        head : [
-            { elem : 'meta', attrs : { name : 'description', content : '' } },
-            { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-            { elem : 'css', url : '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' },
-            { elem : 'css', url : 'index.min.css' }
+    return {
+        block: 'page',
+        title: this.page.title,
+        favicon: '/favicon.ico',
+        head: [
+            { elem: 'meta', attrs: { name: 'description', content: 'Крымская рок-группа' } },
+            { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
+            { elem: 'css', url: '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' },
+            { elem: 'css', url: relPathToRoot + 'index.min.css' }
         ],
-        scripts: [{ elem : 'js', url : 'index.min.js' }],
-        mods : { theme : 'islands' }
-    });
+        scripts: [{ elem: 'js', url: relPathToRoot + 'index.min.js' }],
+        mods: { theme: 'islands' }
+    };
 });

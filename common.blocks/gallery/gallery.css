@@ -1,0 +1,7 @@
+.gallery .image {
+    margin-right: 6px;
+}
+
+.modal .image {
+    display: block;
+}

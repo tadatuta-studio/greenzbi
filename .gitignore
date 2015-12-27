@@ -13,3 +13,5 @@ npm-debug.log
 !*bundles*/*/*.bemdecl.js
 *bundles*/*/*.bemhtml.bemdecl.js
 !*bundles*/.bem/*
+
+output

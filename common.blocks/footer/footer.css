@@ -1,4 +1,19 @@
 .footer
 {
+    line-height: 77px;
     background: #222;
+    color: #7b7b7b;
+}
+
+.footer__inner {
+    display: flex;
+}
+
+.footer__center {
+    flex-grow: 1;
+    align-self: center
+}
+
+.footer .link {
+    color: #aaa;
 }

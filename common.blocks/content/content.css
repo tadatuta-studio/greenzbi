@@ -1,0 +1,9 @@
+.content {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content__title {
+    font-weight: normal;
+}

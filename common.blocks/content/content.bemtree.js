@@ -1,11 +1,9 @@
 block('content').content()(function() {
-    var page = this.page;
-
     return [
         {
             elem: 'title',
-            content: page.title
+            content: this.page.title
         },
-        page.content
+        this.data.content
     ];
 });

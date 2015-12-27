@@ -1,0 +1,1 @@
+<iframe frameborder="0" style="border:none;width:900px;height:600px;" width="900" height="470" src="https://music.yandex.ru/iframe/#album/2072134">Слушайте <a href='https://music.yandex.ru/album/2072134'>Demo</a> — <a href='https://music.yandex.ru/artist/3049525'>Greenzbi</a> на Яндекс.Музыке</iframe>
